@@ -13,6 +13,26 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        arsenal: ['var(--font-arsenal)'],
+        mono: ['var(--font-oxygen_mono)'],
+        nova: ['var(--font-nova_square)'],
+
+      },
+      colors: {
+        transparent: 'transparent',
+        'pink': '#9b6a6c',
+        'grey': '#768191'
+      },
+      animation: {
+        blink: 'blink 1s infinite',
+      },
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: '0' },
+          '50%': { opacity: '1' },
+        },
+      },
     },
   },
   plugins: [],

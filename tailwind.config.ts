@@ -21,9 +21,11 @@ const config: Config = {
       },
       colors: {
         transparent: 'transparent',
-        'pink': '#9b6a6c',
+        'whitesmoke': '#f5f5f5',
+        'navy': '#36465d',
         'grey': '#768191',
-        'whitesmoke': '#F5F5F5'
+        'rose': '#db6c79',
+        'peach': '#fcde9c'
       },
       animation: {
         blink: 'blink 1s infinite',

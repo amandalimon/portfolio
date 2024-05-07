@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Hero = () => {
     return (
-        <section className="h-screen flex justify-center items-center">
+        <section className="bg-navy h-screen flex justify-center items-center">
             <Image
                 src="/images/hero.gif"
                 alt="hero"

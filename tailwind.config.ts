@@ -22,7 +22,8 @@ const config: Config = {
       colors: {
         transparent: 'transparent',
         'pink': '#9b6a6c',
-        'grey': '#768191'
+        'grey': '#768191',
+        'whitesmoke': '#F5F5F5'
       },
       animation: {
         blink: 'blink 1s infinite',

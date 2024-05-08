@@ -1,45 +1,10 @@
 "use client"
-import { useEffect, useState } from 'react';
-import { fetchGitHubRepos } from 'app/services/github/repos';
-import { repoImages } from 'app/utils/repoImages';
+import { useGitHubRepos } from 'app/hooks/useGithubRepos';
 import { ProjectCard } from '../ProjectCard';
-import { Repo } from '../../types';
-
-interface RepoLanguages {
-    [repoName: string]: string[];
-}
+import { repoImages } from 'app/utils/repoImages';
 
 const GitHubRepos = () => {
-    const [repos, setRepos] = useState<Repo[]>([]);
-    const [repoLanguages, setRepoLanguages] = useState<RepoLanguages>({})
-
-    useEffect(() => {
-        fetchGitHubRepos('amandalimon')
-            .then((data: Repo[]) => {
-                setRepos(data);
-                const repoLanguagesPromises = data.map(repo => {
-                    return fetch(repo.languages_url)
-                        .then(response => response.json())
-                        .then(languages => {
-                            const languagesData = Object.keys(languages);
-                            return { repoName: repo.name, languages: languagesData };
-                        })
-                        .catch(error => {
-                            console.error('Error fetching languages:', error);
-                            return { repoName: repo.name, languages: [] };
-                        });
-                });
-                Promise.all(repoLanguagesPromises)
-                    .then(repoLanguagesData => {
-                        const repoLanguagesMap: any = {};
-                        repoLanguagesData.forEach(repoData => {
-                            repoLanguagesMap[repoData.repoName] = repoData.languages;
-                        });
-                        setRepoLanguages(repoLanguagesMap);
-                    });
-            })
-            .catch((error: Error) => console.error('Error fetching repositories:', error));
-    }, []);
+    const { repos, repoLanguages } = useGitHubRepos('amandalimon');
 
     return (
         <section className='flex flex-col items-center justify-center font-arsenal px-4 md:px-8 lg:px-16 xl:px-24'>
@@ -50,10 +15,11 @@ const GitHubRepos = () => {
                 {repos.map(repo => (
                     <ProjectCard
                         key={repo.id}
+                        image={repoImages[repo.name.toLowerCase()]}
                         name={repo.name}
                         languages={repoLanguages[repo.name]}
                         url={repo.html_url}
-                        image={repoImages[repo.name.toLowerCase()]} />
+                    />
                 ))}
             </div>
         </section>

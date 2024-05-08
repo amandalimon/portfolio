@@ -21,7 +21,7 @@ export const ProjectCard = ({ url, name, image, languages }: ProjectCardProps) =
                 />
             )}
             <h1 className="font-bold">{name}</h1>
-            <p>Lenguajes utilizados: {languages.join(', ')}</p>
+            <p>Lenguajes utilizados: {languages}</p>
 
             <section className="flex justify-between">
                 <a

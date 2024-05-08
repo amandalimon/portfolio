@@ -14,7 +14,7 @@ export const Hero = () => {
                     className="font-nova text-2xl font-bold text-center">Amanda Carolina Limón Fernández
                 </h1>
                 <h2
-                    className="font-mono text-xl text-center bg-grey px-1 rounded-sm">Frontend Developer Junior
+                    className="font-mono text-xl text-center">Frontend Developer Junior
                 </h2>
             </div>
         </section>

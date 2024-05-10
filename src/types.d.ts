@@ -4,8 +4,5 @@ export interface Repo {
     name: string;
     languages: string[];
     languages_url: string | ''
-}
-
-export interface RepoImages {
-    [key: string]: string;
+    homepage: string;
 }

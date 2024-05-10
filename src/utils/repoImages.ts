@@ -1,4 +1,6 @@
-import { RepoImages } from "../types";
+interface RepoImages {
+    [key: string]: string;
+}
 
 export const repoImages: RepoImages = {
     'amandalimon': '/images/projects/readme.png',

@@ -17,6 +17,7 @@ const config: Config = {
         arsenal: ['var(--font-arsenal)'],
         mono: ['var(--font-oxygen_mono)'],
         nova: ['var(--font-nova_square)'],
+        raleway: ['var(--font-raleway)'],
       },
       colors: {
         transparent: 'transparent',

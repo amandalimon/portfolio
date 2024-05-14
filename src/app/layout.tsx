@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { arsenal, oxygen_mono, nova_square, raleway } from "app/utils/fonts";
 import "./globals.css";
-import { arsenal, oxygen_mono, nova_square } from "app/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Portfolio: Amanda Limon",
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${arsenal} ${oxygen_mono} ${nova_square}`}>{children}</body>
+      <body className={`${arsenal} ${raleway} ${oxygen_mono} ${nova_square}`}>{children}</body>
     </html>
   );
 }

@@ -15,7 +15,7 @@ export const Projects = () => {
     };
 
     return (
-        <section className='flex flex-col justify-center items-center my-24 px-6 md:px-12 lg:px-24 xl:px-32'>
+        <section className='bg-navy flex flex-col justify-center items-center py-24 px-6 md:px-12 lg:px-24 xl:px-32'>
             <h2 className='text-5xl font-nova mb-12'>
                 Mis Proyectos
             </h2>
@@ -23,7 +23,7 @@ export const Projects = () => {
                 {allLanguages.map(language => (
                     <button
                         key={language}
-                        className={`mr-2 px-4 py-2 rounded-md focus:outline-none ${selectedLanguage === language ? 'bg-gray-500 text-white' : 'bg-gray-200 text-gray-700'}`}
+                        className={`mr-2 px-4 py-2 rounded-md font-mono ${selectedLanguage === language ? 'bg-gray-500 text-white' : 'bg-gray-200 text-gray-700'}`}
                         onClick={() => filterByLanguage(language)}
                     >
                         {language}

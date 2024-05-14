@@ -21,6 +21,10 @@ body {
   background-color: #768191;
 }
 
+h2 {
+  font-family: monospace;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

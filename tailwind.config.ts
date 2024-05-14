@@ -17,7 +17,6 @@ const config: Config = {
         arsenal: ['var(--font-arsenal)'],
         mono: ['var(--font-oxygen_mono)'],
         nova: ['var(--font-nova_square)'],
-
       },
       colors: {
         transparent: 'transparent',
@@ -25,16 +24,14 @@ const config: Config = {
         'navy': '#36465d',
         'grey': '#768191',
         'rose': '#db6c79',
-        'peach': '#fcde9c'
-      },
-      animation: {
-        blink: 'blink 1s infinite',
-      },
-      keyframes: {
-        blink: {
-          '0%, 100%': { opacity: '0' },
-          '50%': { opacity: '1' },
-        },
+        'orchid': '#E8B4BC',
+        'peach': '#fcde9c',
+        'dark': '#222831',
+        'airblue': '#7C9EB2',
+        'silver': '#C0C5C1',
+        'powderblue': '#A2B2C7',
+        'purple': '#59405C',
+        'violet': '#87556F',
       },
     },
   },

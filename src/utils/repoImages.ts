@@ -3,7 +3,6 @@ interface RepoImages {
 }
 
 export const repoImages: RepoImages = {
-    'amandalimon': '/images/projects/readme.png',
     'ecommerce-practice-react-vite-tailwind': '/images/projects/shopi.png',
     'future-tech-nextjs': '/images/projects/futuretech.png',
     'nextjs-ts-lazy-component': '/images/projects/randomcat.png',

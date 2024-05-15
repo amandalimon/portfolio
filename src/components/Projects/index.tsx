@@ -15,7 +15,7 @@ export const Projects = () => {
     };
 
     return (
-        <section className='bg-navy flex flex-col justify-center items-center py-24 px-6 md:px-12 lg:px-24 xl:px-32'>
+        <section className='flex flex-col justify-center items-center py-24 px-6 md:px-12 lg:px-24 xl:px-32'>
             <h2 className='text-5xl font-nova mb-12'>
                 Mis Proyectos
             </h2>

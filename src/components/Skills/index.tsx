@@ -17,7 +17,7 @@ export const Skills = () => (
             title="Hosting/SaaS"
             skills={[
                 { src: "vercel", alt: "Vercel", name: "Vercel" },
-                { src: "github", alt: "GithubPages", name: "GithubPages" },
+                { src: "github", alt: "GithubPages", name: "Pages" },
             ]}
         />
         <SkillSection
@@ -32,15 +32,15 @@ export const Skills = () => (
                 { src: "sass", alt: "Sass", name: "Sass" },
             ]}
         />
-        <a
-            className="relative flex items-center justify-start overflow-hidden transition-all bg-airblue rounded hover:bg-purple group py-1.5 px-2.5 mt-10"
-            href="https://drive.google.com/drive/folders/18xkhvQdke5YWDUhYWzV2o_UMH1Qwu-Hj?usp=sharing"
-        >
-            <span className="w-full h-48 rounded bg-violet absolute bottom-0 left-0 translate-x-full translate-y-full mb-9 ml-9 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:translate-y-0 group-hover:mb-0 group-hover:ml-0"></span>
-            <span className="relative flex items-center justify-center gap-2 font-nova text-xl w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-whitesmoke">
-                <GrCertificate />
-                Ver mis certificados
-            </span>
+        <a href="https://drive.google.com/drive/folders/18xkhvQdke5YWDUhYWzV2o_UMH1Qwu-Hj?usp=sharing"
+            className="mt-12 shadow-xl font-arsenal font-semibold box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-2 overflow-hidden text-white transition-all duration-300 bg-payne rounded-md cursor-pointer group ring-offset-2 ring-1 ring-payne ring-offset-powderblue hover:ring-offset-airblue ease focus:outline-none">
+
+            <span className="absolute bottom-0 right-0 w-8 h-24 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+
+            <span className="absolute top-0 left-0 w-24 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+            <span className="relative z-20 flex items-center">
+                <GrCertificate className="relative w-5 h-5 mr-2 text-white" />
+                Ver mis Certificados</span>
         </a>
     </section>
 );

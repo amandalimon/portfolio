@@ -33,6 +33,7 @@ const config: Config = {
         'powderblue': '#A2B2C7',
         'purple': '#59405C',
         'violet': '#87556F',
+        'payne':'#496989'
       },
     },
   },

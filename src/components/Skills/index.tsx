@@ -2,8 +2,10 @@ import { GrCertificate } from "react-icons/gr";
 import { SkillSection } from "./SkillSection";
 
 export const Skills = () => (
-    <section className="flex flex-col justify-center items-center gap-4 md:gap-8 py-24">
-        <h2 className="font-nova text-5xl mb-2">Habilidades</h2>
+    <section id="skills" className="flex flex-col justify-center items-center gap-6 px-2 py-12 md:py-14 lg:py-18 xl:py-22">
+        <h1 className='text-4xl font-nova'>Habilidades</h1>
+        <div className="w-1/12 mb-8 border-2 border-orchid"></div>
+
         <SkillSection
             title="Lenguajes de Programación"
             skills={[
@@ -32,15 +34,13 @@ export const Skills = () => (
                 { src: "sass", alt: "Sass", name: "Sass" },
             ]}
         />
-        <a href="https://drive.google.com/drive/folders/18xkhvQdke5YWDUhYWzV2o_UMH1Qwu-Hj?usp=sharing"
-            className="mt-12 shadow-xl font-arsenal font-semibold box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-2 overflow-hidden text-white transition-all duration-300 bg-payne rounded-md cursor-pointer group ring-offset-2 ring-1 ring-payne ring-offset-powderblue hover:ring-offset-airblue ease focus:outline-none">
-
-            <span className="absolute bottom-0 right-0 w-8 h-24 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
-
-            <span className="absolute top-0 left-0 w-24 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
-            <span className="relative z-20 flex items-center">
-                <GrCertificate className="relative w-5 h-5 mr-2 text-white" />
-                Ver mis Certificados</span>
+        <a
+            href="https://drive.google.com/drive/folders/18xkhvQdke5YWDUhYWzV2o_UMH1Qwu-Hj?usp=sharing" className="font-arsenal font-semibold text-lg mt-12 relative rounded px-5 py-2.5 overflow-hidden group bg-airblue hover:bg-gradient-to-r hover:from-airblue hover:to-powderblue text-white hover:ring-2 hover:ring-offset-2 ring-offset-lightnavy hover:ring-airblue transition-all ease-out duration-300">
+            <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+            <span className="relative flex items-center justify-center gap-2">
+                <GrCertificate className="w-5 h-5" />
+                Ver mis Certificados
+            </span>
         </a>
-    </section>
+    </section >
 );

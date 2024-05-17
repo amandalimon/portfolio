@@ -8,7 +8,7 @@ interface SkillSectionProps {
 export const SkillSection = ({ title, skills }: SkillSectionProps) => (
     <section className="flex flex-col justify-center items-center">
         <h2 className="font-mono text-xl mb-3">{title}</h2>
-        <div className="flex flex-wrap justify-center items-center gap-3">
+        <div className="flex flex-wrap justify-center items-center gap-8">
             {skills.map((skill) => (
                 <SkillLogo key={skill.src} {...skill} />
             ))}

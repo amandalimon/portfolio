@@ -1,6 +1,6 @@
 import { ContactLink } from "./ContactLink";
 import { IconLink } from "./IconLink";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { SiPlatzi } from "react-icons/si";
 import { PiReadCvLogoFill } from "react-icons/pi";
 import { IoMdMail } from "react-icons/io";
@@ -8,7 +8,7 @@ import { IoMdMail } from "react-icons/io";
 const socialLinks = [
     { href: "https:/linkedin.com/in/amandalimon", icon: FaLinkedin, label: "LinkedIn" },
     { href: "https://github.com/amandalimon", icon: FaGithub, label: "GitHub" },
-    { href: "https://www.instagram.com/wea_limon", icon: FaInstagram, label: "Instagram" },
+    { href: "https://wa.me/528186008387", icon: FaWhatsapp, label: "Whatsapp" },
 ];
 
 const contactLinks = [
@@ -31,16 +31,17 @@ const contactLinks = [
 
 export const Contact = () => {
     return (
-        <section className="bg-navy flex flex-col justify-center items-center py-16 gap-12">
+        <section id="contact" className="h-screen flex flex-col items-center justify-center py-16 gap-6">
             <h2 className="font-nova text-5xl">Contacto</h2>
+            <div className="w-1/12 mb-8 border-2 border-orchid"></div>
 
-            <section className="flex gap-6">
+            <section className="flex gap-6 mb-4">
                 {socialLinks.map((link) => (
                     <IconLink key={link.href} {...link} />
                 ))}
             </section>
 
-            <section className="flex gap-4">
+            <section className="flex gap-4 m-2">
                 {contactLinks.map((link) => (
                     <ContactLink key={link.href} {...link} />
                 ))}

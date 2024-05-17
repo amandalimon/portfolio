@@ -23,6 +23,7 @@ const config: Config = {
         transparent: 'transparent',
         'whitesmoke': '#f5f5f5',
         'navy': '#36465d',
+        'lightnavy': '#50627b',
         'grey': '#768191',
         'rose': '#db6c79',
         'orchid': '#E8B4BC',

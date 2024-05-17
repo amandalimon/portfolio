@@ -15,21 +15,26 @@ export const Projects = () => {
     };
 
     return (
-        <section className='flex flex-col justify-center items-center py-24 px-6 md:px-12 lg:px-24 xl:px-32'>
-            <h2 className='text-5xl font-nova mb-12'>
-                Mis Proyectos
-            </h2>
-            <div className='flex mb-6'>
+        <section id="projects" className='gap-6 bg-lightnavy flex flex-col justify-center py-24 p-10 md:p-12 lg:p-24 xl:p-28'>
+
+            <h1 className='text-5xl font-nova'>Mis Proyectos</h1>
+            <div className="w-1/12 mb-8 border-2 border-orchid"></div>
+            <p className="font-mono text-lg">
+                Esta sección recopila mis repositorios de GitHub utilizando su API. Cada proyecto es una oportunidad de aprendizaje continuo y una muestra de cómo me enfrento a desafíos técnicos. 
+            </p>
+
+            <div className='flex my-8'>
                 {allLanguages.map(language => (
                     <button
                         key={language}
-                        className={`mr-2 px-4 py-2 rounded-md font-mono ${selectedLanguage === language ? 'bg-gray-500 text-white' : 'bg-gray-200 text-gray-700'}`}
+                        className={`mr-2 px-4 py-2 rounded-md font-mono ${selectedLanguage === language ? 'bg-airblue text-white' : 'bg-gray-200 text-gray-700'}`}
                         onClick={() => filterByLanguage(language)}
                     >
                         {language}
                     </button>
                 ))}
             </div>
+
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
                 {repos
                     .filter(repo => repo.name !== "amandalimon" && (!selectedLanguage || (repoLanguages[repo.name] && repoLanguages[repo.name].includes(selectedLanguage))))

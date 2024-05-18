@@ -54,7 +54,7 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <nav className="fixed flex items-center justify-between w-full px-14 py-3 bg-dark opacity-80 border-dark border-b-2 shadow-lg z-10 font-arsenal">
+        <nav className="fixed flex items-center justify-between w-full px-14 py-3 bg-dark opacity-80 border-dark border-b-2 shadow-lg z-10 font-arsenal font-bold">
             <a href="https://portfolio.vercel.app/" className="font-mono bg-orchid rounded-full px-2 font-bold">Logo</a>
             <div className="hidden md:flex gap-8">
                 {sections.map(section => (
@@ -76,7 +76,7 @@ export const Navbar = () => {
             </button>
 
             {isOpen && (
-                <div className="absolute top-16 left-0 right-0 bg-dark flex flex-col items-center gap-4 p-4 md:hidden font-arsenal">
+                <div className="absolute top-16 left-0 right-0 bg-dark flex flex-col items-center gap-4 p-4 md:hidden font-arsenal font-bold">
                     {sections.map(section => (
                         <NavLink
                             key={section}

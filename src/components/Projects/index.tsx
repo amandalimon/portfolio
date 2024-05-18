@@ -20,7 +20,7 @@ export const Projects = () => {
             <h1 className='text-5xl font-nova'>Mis Proyectos</h1>
             <div className="w-1/12 mb-8 border-2 border-orchid"></div>
             <p className="font-mono text-lg">
-                Esta sección recopila mis repositorios de GitHub utilizando su API. Cada proyecto es una oportunidad de aprendizaje continuo y una muestra de cómo me enfrento a desafíos técnicos. 
+                Esta sección recopila mis repositorios de GitHub utilizando su API. *borrar esto suena muy mamador* Cada proyecto es una oportunidad de aprendizaje continuo y una muestra de cómo me enfrento a desafíos técnicos.
             </p>
 
             <div className='flex my-8'>

@@ -35,7 +35,7 @@ export const Skills = () => (
             ]}
         />
         <a
-            href="https://drive.google.com/drive/folders/18xkhvQdke5YWDUhYWzV2o_UMH1Qwu-Hj?usp=sharing" className="font-arsenal font-semibold text-lg mt-12 relative rounded px-5 py-2.5 overflow-hidden group bg-airblue hover:bg-gradient-to-r hover:from-airblue hover:to-powderblue text-white hover:ring-2 hover:ring-offset-2 ring-offset-lightnavy hover:ring-airblue transition-all ease-out duration-300">
+            href="https://drive.google.com/drive/folders/18xkhvQdke5YWDUhYWzV2o_UMH1Qwu-Hj?usp=sharing" className="font-arsenal font-semibold text-lg mt-6 relative rounded px-5 py-2.5 overflow-hidden group bg-airblue hover:bg-gradient-to-r hover:from-airblue hover:to-powderblue text-white hover:ring-2 hover:ring-offset-2 ring-offset-lightnavy hover:ring-airblue transition-all ease-out duration-300">
             <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
             <span className="relative flex items-center justify-center gap-2">
                 <GrCertificate className="w-5 h-5" />

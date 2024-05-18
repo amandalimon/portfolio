@@ -32,7 +32,7 @@ const contactLinks = [
 export const Contact = () => {
     return (
         <section id="contact" className="h-screen flex flex-col items-center justify-center py-16 gap-6">
-            <h2 className="font-nova text-5xl">Contacto</h2>
+            <h1 className="font-nova text-5xl">Contacto</h1>
             <div className="w-1/12 mb-8 border-2 border-orchid"></div>
 
             <section className="flex gap-6 mb-4">

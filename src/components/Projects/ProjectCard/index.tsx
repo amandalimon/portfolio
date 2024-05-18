@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { useState } from "react";
+import { Modal } from "app/components/Modal";
+import { FaCrown, FaExternalLinkAlt } from "react-icons/fa";
 
 interface ProjectCardProps {
     repoUrl: string;
@@ -12,14 +14,26 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPagesUrl }: ProjectCardProps) => {
 
-    const renderAppLink = (url: string) => (
-        <a className="flex justify-center items-center rounded-md px-1 w-24 bg-peach" href={url}>App
+    const [openModal, setOpenModal] = useState(false)
+    const toggleModal = () => {
+        setOpenModal(prevState => !prevState);
+    }
+    const topProjects = ["ecommerce-practice-react-vite-tailwind", "future-tech-nextjs", "react-redux-pokedex", "TodoMachine"]
+
+    const renderLink = (url: string, label: string) => (
+        <a className="flex justify-center items-center rounded-md px-1 w-24 border-2" href={url} target="_blank" rel="noopener noreferrer">
+            {label}
             <FaExternalLinkAlt className="ml-1 w-3" />
         </a>
     );
 
     return (
         <figure className="flex flex-col justify-between h-full rounded-md font-arsenal bg-whitesmoke text-black">
+            {topProjects.includes(name) &&
+                <button onClick={toggleModal} className="absolute bg-peach flex justify-start items-center gap-2 px-2 py-1 rounded-tl" aria-label="Ver detalles del proyecto">
+                    <FaCrown />Ver detalles
+                </button>
+            }
             {image && (
                 <Image
                     src={image}
@@ -35,13 +49,12 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
                     <p className="mb-4 leading-5">Lenguajes utilizados: {languages?.join(', ')}</p>
                 </div>
                 <div className="flex justify-between items-center">
-                    <a className="flex justify-center items-center rounded-md px-1 w-24 border-2" href={repoUrl}>Repo
-                        <FaExternalLinkAlt className="ml-1 w-3" />
-                    </a>
-                    {appUrl && renderAppLink(appUrl)}
-                    {githubPagesUrl && renderAppLink(githubPagesUrl)}
+                    {renderLink(repoUrl, "Repo")}
+                    {appUrl && renderLink(appUrl, "App")}
+                    {githubPagesUrl && renderLink(githubPagesUrl, "App")}
                 </div>
             </section>
+            {openModal && <Modal show={openModal} onClose={toggleModal} />}
         </figure >
     );
 };

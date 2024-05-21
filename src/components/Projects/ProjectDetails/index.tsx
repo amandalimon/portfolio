@@ -1,42 +1,31 @@
-import { MouseEventHandler } from "react"
 import Image from "next/image";
 
-interface ModalProps {
-    show: boolean;
-    onClose: MouseEventHandler<HTMLButtonElement>;
-    selectedProject: 'future-tech-nextjs' | 'ecommerce-practice-react-vite-tailwind' | 'react-redux-pokedex' | 'TodoMachine';
-}
-
-interface ProjectDetailsProps {
-    title: string
-    description: string
-    imageSrc: string
-    features: string[]
-    technologies: string[]
-}
-
-export const ProjectDetails = ({ title, description, imageSrc, features, technologies }: ProjectDetailsProps) => (
-    <figure className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <section className="col-span-1 flex flex-col gap-6">
-            <h1 className="font-bold text-lg">{title}</h1>
-            <p>{description}</p>
-            <Image
-                src={imageSrc}
-                alt={title}
-                width={650}
-                height={500} className="rounded"
-            />
-        </section>
-
-        <div className="col-span-1 flex flex-col gap-6">
-            <h2>Características</h2>
-            <ul className="list-disc ml-8">
-                {features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                ))}
-            </ul>
-            <h2>Tecnologías utilizadas: </h2>
-            <p className="">{technologies.join(', ')}</p>
+export const ProjectDetails = ({ title, description, imageSrc, features, technologies }) => (
+    <figure className="bg-whitesmoke flex flex-col rounded">
+        <Image
+            src={imageSrc}
+            alt={title}
+            width={400}
+            height={200}
+            className="rounded-t"
+        />
+        <div className="flex flex-col gap-4 p-4">
+            <div>
+                <h1 className="font-bold text-lg">{title}</h1>
+                <p>{description}</p>
+            </div>
+            <div>
+                <h2>Características</h2>
+                <ul>
+                    {features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                    ))}
+                </ul>
+            </div>
+            <div>
+                <h2>Tecnologías utilizadas</h2>
+                <p>{technologies.join(', ')}</p>
+            </div>
         </div>
     </figure>
 );
@@ -87,31 +76,5 @@ export const projectData = {
             "Interactúa con una interfaz intuitiva y fácil de usar."
         ],
         technologies: ["Redux.js", "Redux Toolkit", "Axios"]
-    },
-    "TodoMachine": {
-        title: "TODO Machine",
-        description: "Aplicación web",
-        imageSrc: "/images/projects/todomachine.png",
-        features: [
-            ""
-        ],
-        technologies: ["React.js", "React Router", "CSS", "Html"]
     }
 };
-
-export const Modal = ({ show, onClose, selectedProject }: ModalProps) => {
-    if (!show) { return null }
-    const project = projectData[selectedProject];
-    if (!project) return null;
-
-    return (
-        <div className="fixed left-0 top-0 w-full h-full bg-black/50 z-50 backdrop-blur flex justify-center items-center p-4 sm:p-0">
-            <div className="bg-white rounded w-full max-w-lg md:max-w-2xl lg:max-w-4xl h-5/6 sm:h-auto p-6 overflow-y-auto">
-                <button
-                    onClick={onClose}
-                    className="w-4 h-4 bg-red-400 text-red-400 rounded-full flex items-center justify-center mb-4 hover:text-red-900">&times;</button>
-                <ProjectDetails {...project} />
-            </div>
-        </div>
-    );
-}

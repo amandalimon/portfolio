@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
-import { Modal } from "app/components/Modal";
 import { FaCrown, FaExternalLinkAlt } from "react-icons/fa";
+import { Modal } from "app/components/Modal";
 
 interface ProjectCardProps {
     repoUrl: string;
@@ -12,25 +12,34 @@ interface ProjectCardProps {
     githubPagesUrl: string;
 }
 
-export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPagesUrl }: ProjectCardProps) => {
+type topProjects = 'future-tech-nextjs' | 'ecommerce-practice-react-vite-tailwind' | 'react-redux-pokedex' | 'TodoMachine'
 
-    const [openModal, setOpenModal] = useState(false)
-    const toggleModal = () => {
-        setOpenModal(prevState => !prevState);
-    }
+export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPagesUrl }: ProjectCardProps) => {
+    const [selectedProject, setSelectedProject] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setSelectedProject(name);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedProject('');
+    };
+
     const topProjects = ["ecommerce-practice-react-vite-tailwind", "future-tech-nextjs", "react-redux-pokedex", "TodoMachine"]
 
     const renderLink = (url: string, label: string) => (
-        <a className="flex justify-center items-center rounded-md px-1 w-24 border-2" href={url} target="_blank" rel="noopener noreferrer">
-            {label}
-            <FaExternalLinkAlt className="ml-1 w-3" />
+        <a className="flex justify-center items-center rounded-md px-1 w-24 border-2" href={url}>
+            {label}<FaExternalLinkAlt className="ml-1 w-3" />
         </a>
     );
 
     return (
-        <figure className="flex flex-col justify-between h-full rounded-md font-arsenal bg-whitesmoke text-black">
+        <figure className="relative flex flex-col justify-between h-full rounded font-arsenal bg-whitesmoke text-black">
             {topProjects.includes(name) &&
-                <button onClick={toggleModal} className="absolute bg-peach flex justify-start items-center gap-2 px-2 py-1 rounded-tl" aria-label="Ver detalles del proyecto">
+                <button onClick={openModal} className="absolute bg-peach flex justify-start items-center gap-2 px-2 py-1 rounded-tl">
                     <FaCrown />Ver detalles
                 </button>
             }
@@ -40,7 +49,7 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
                     alt={name}
                     width={600}
                     height={500}
-                    className="object-cover rounded-t-md"
+                    className="object-cover rounded"
                 />
             )}
             <section className="flex flex-col flex-grow p-2">
@@ -54,7 +63,11 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
                     {githubPagesUrl && renderLink(githubPagesUrl, "App")}
                 </div>
             </section>
-            {openModal && <Modal show={openModal} onClose={toggleModal} />}
+            {isModalOpen && (<Modal
+                show={isModalOpen}
+                onClose={closeModal}
+                selectedProject={selectedProject as topProjects}
+            />)}
         </figure >
     );
 };

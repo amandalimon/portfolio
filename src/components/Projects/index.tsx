@@ -37,7 +37,7 @@ export const Projects = () => {
 
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
                 {repos
-                    .filter(repo => repo.name !== "amandalimon" && (!selectedLanguage || (repoLanguages[repo.name] && repoLanguages[repo.name].includes(selectedLanguage))))
+                    .filter(repo => repo.name !== "amandalimon" && repo.name !== "portfolio" && (!selectedLanguage || (repoLanguages[repo.name] && repoLanguages[repo.name].includes(selectedLanguage))))
                     .map(repo => (
                         <div key={repo.id} className="flex flex-col">
                             <ProjectCard

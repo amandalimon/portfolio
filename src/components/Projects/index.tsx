@@ -20,14 +20,14 @@ export const Projects = () => {
             <h1 className='text-5xl font-nova'>Mis Proyectos</h1>
             <div className="w-1/12 mb-8 border-2 border-orchid"></div>
             <p className="font-mono text-lg">
-                Esta sección recopila mis repositorios de GitHub utilizando su API. *borrar esto suena muy mamador* Cada proyecto es una oportunidad de aprendizaje continuo y una muestra de cómo me enfrento a desafíos técnicos.
+                Esta sección recopila mis repositorios de GitHub utilizando su API. Puedes encontrar más información sobre mis proyectos destacados al hacer clic en 'Ver detalles'.
             </p>
 
-            <div className='flex my-8'>
+            <div className='flex flex-wrap justify-start my-8'>
                 {allLanguages.map(language => (
                     <button
                         key={language}
-                        className={`mr-2 px-4 py-2 rounded-md font-mono ${selectedLanguage === language ? 'bg-airblue text-white' : 'bg-gray-200 text-gray-700'}`}
+                        className={`mr-2 mt-2 px-4 py-2 rounded-md font-mono ${selectedLanguage === language ? 'bg-airblue text-white' : 'bg-gray-200 text-gray-700'}`}
                         onClick={() => filterByLanguage(language)}
                     >
                         {language}

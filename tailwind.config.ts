@@ -27,14 +27,15 @@ const config: Config = {
         'grey': '#768191',
         'rose': '#db6c79',
         'orchid': '#E8B4BC',
-        'peach': '#fcde9c',
+        'mustard': '#FFDD4A', // #FFDD4A #FCD757
+        'maize': '#fff275',
         'dark': '#222831',
         'airblue': '#7C9EB2',
         'silver': '#C0C5C1',
         'powderblue': '#A2B2C7',
         'purple': '#59405C',
         'violet': '#87556F',
-        'payne':'#496989'
+        'payne': '#496989'
       },
     },
   },

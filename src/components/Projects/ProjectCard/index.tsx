@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FaCrown, FaExternalLinkAlt } from "react-icons/fa";
+import { TbListDetails, TbExternalLink } from "react-icons/tb";
+
 import { Modal } from "app/components/Modal";
 
 interface ProjectCardProps {
@@ -32,17 +34,20 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
 
     const renderLink = (url: string, label: string) => (
         <a className="flex justify-center items-center rounded-md px-1 w-24 border-2" href={url}>
-            {label}<FaExternalLinkAlt className="ml-1 w-3" />
+            {label}<TbExternalLink className="ml-1 w-4 h-4" />
         </a>
     );
 
     return (
         <figure className="relative flex flex-col justify-between h-full rounded font-arsenal bg-whitesmoke text-black">
-            {topProjects.includes(name) &&
-                <button onClick={openModal} className="absolute bg-peach flex justify-start items-center gap-2 px-2 py-1 rounded-tl">
-                    <FaCrown />Ver detalles
+            {topProjects.includes(name) && (
+                <button onClick={openModal} className="absolute rounded-tl px-4 py-1 overflow-hidden group bg-mustard hover:bg-gradient-to-r hover:from-maize hover:to-mustard transition-all ease-out duration-300">
+                    <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-20 rotate-12 group-hover:-translate-x-40 ease"></span>
+                    <span className="relative flex items-center justify-center gap-2">
+                        <TbListDetails className="w-4 h-4" />Ver detalles
+                    </span>
                 </button>
-            }
+            )}
             {image && (
                 <Image
                     src={image}
@@ -67,7 +72,8 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
                 show={isModalOpen}
                 onClose={closeModal}
                 selectedProject={selectedProject as topProjects}
-            />)}
+            />
+            )}
         </figure >
     );
 };

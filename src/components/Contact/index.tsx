@@ -31,7 +31,7 @@ const contactLinks = [
 
 export const Contact = () => {
     return (
-        <section id="contact" className="h-screen flex flex-col items-center justify-center py-16 gap-6">
+        <section id="contact" className="h-screen w-full flex flex-col items-center justify-center py-16 gap-6">
             <h1 className="font-nova text-5xl">Contacto</h1>
             <div className="w-1/12 mb-8 border-2 border-orchid"></div>
 
@@ -41,7 +41,7 @@ export const Contact = () => {
                 ))}
             </section>
 
-            <section className="flex gap-4 m-2">
+            <section className="flex flex-col lg:flex-row lg:justify-center lg:items-center my-8 gap-4 m-2 w-2/4">
                 {contactLinks.map((link) => (
                     <ContactLink key={link.href} {...link} />
                 ))}

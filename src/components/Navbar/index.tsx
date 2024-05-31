@@ -1,10 +1,7 @@
 "use client"
-import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import useNavStore, { Section } from 'app/hooks/useNavStore';
 import { IoMenu } from "react-icons/io5";
-
-type Section = 'home' | 'about' | 'skills' | 'projects' | 'contact';
-
-const sections: Section[] = ['home', 'about', 'skills', 'projects', 'contact'];
 
 const NavLink = ({ section, activeSection, handleSetActive }: { section: Section, activeSection: Section, handleSetActive: (section: Section) => void }) => (
     <a
@@ -17,8 +14,7 @@ const NavLink = ({ section, activeSection, handleSetActive }: { section: Section
 );
 
 export const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState<Section>('home');
+    const { isOpen, setIsOpen, activeSection, setActiveSection } = useNavStore();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -29,34 +25,13 @@ export const Navbar = () => {
         setIsOpen(false);
     };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const offsets = sections.map(section => {
-                const element = document.getElementById(section);
-                return {
-                    section,
-                    offset: element ? element.offsetTop : 0
-                };
-            });
-
-            const scrollPosition = window.scrollY + 100;
-
-            for (let i = offsets.length - 1; i >= 0; i--) {
-                if (scrollPosition >= offsets[i].offset) {
-                    setActiveSection(sections[i]);
-                    break;
-                }
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    const sections: Section[] = ['home', 'about', 'skills', 'projects', 'contact'];
 
     return (
-        <nav className="fixed flex items-center justify-between w-full px-14 py-3 bg-dark opacity-80 border-dark border-b-2 shadow-lg z-10 font-arsenal font-bold">
-            <a href="https://portfolio.vercel.app/" className="font-mono bg-orchid rounded-full px-2 font-bold">Logo</a>
-            <div className="hidden md:flex gap-8">
+        <nav className="fixed flex items-center justify-between w-full px-6 py-2 bg-dark/90 backdrop-blur shadow-lg z-10 font-arsenal font-bold">
+            <Image src="/images/logo.png" alt="logo" width={60} height={60} />
+
+            <div className="hidden sm:flex gap-8">
                 {sections.map(section => (
                     <NavLink
                         key={section}
@@ -68,15 +43,14 @@ export const Navbar = () => {
             </div>
 
             <button
-                className="md:hidden text-white"
+                className="sm:hidden text-white"
                 onClick={toggleMenu}
-                aria-label="Toggle menu"
             >
                 <IoMenu className='w-6 h-6' />
             </button>
 
             {isOpen && (
-                <div className="absolute top-16 left-0 right-0 bg-dark flex flex-col items-center gap-4 p-4 md:hidden font-arsenal font-bold">
+                <div className="absolute top-16 left-0 right-0 bg-dark flex flex-col items-center gap-4 p-4 sm:hidden font-arsenal font-bold">
                     {sections.map(section => (
                         <NavLink
                             key={section}

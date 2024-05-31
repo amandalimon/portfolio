@@ -27,7 +27,7 @@ const config: Config = {
         'grey': '#768191',
         'rose': '#db6c79',
         'orchid': '#E8B4BC',
-        'mustard': '#FFDD4A', // #FFDD4A #FCD757
+        'mustard': '#FFDD4A',
         'maize': '#fff275',
         'dark': '#222831',
         'airblue': '#7C9EB2',

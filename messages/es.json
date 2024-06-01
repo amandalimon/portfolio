@@ -1,6 +1,27 @@
 {
-    "AboutPage": {
-      "title": "Sobre mi",
-      "description": "Aspirante a desarrolladora frontend junior con sólida especialización en el framework de JavaScript React. Mi enfoque de estudio se ha centrado en dominar esta tecnología a profundidad, lo que me ha permitido comprender la arquitectura web y crear experiencias de usuario intuitivas y atractivas. Estoy emocionada por aplicar mi experiencia en un entorno profesional y contribuir al desarrollo de proyectos innovadores."
-    }
+  "Navigation": {
+    "home": "Inicio",
+    "about": "Sobre mi",
+    "skills": "Habilidades",
+    "projects": "Projectos",
+    "contact": "Contacto"
+  },
+  "AboutPage": {
+    "title": "Sobre mi",
+    "description": "Aspirante a desarrolladora frontend junior con sólida especialización en el framework de JavaScript React. Mi enfoque de estudio se ha centrado en dominar esta tecnología a profundidad, lo que me ha permitido comprender la arquitectura web y crear experiencias de usuario intuitivas y atractivas. Estoy emocionada por aplicar mi experiencia en un entorno profesional y contribuir al desarrollo de proyectos innovadores."
+  },
+  "SkillsPage": {
+    "title": "Habilidades",
+    "section1": "Lenguajes de Programación",
+    "section2": "Hosting/SaaS",
+    "section3": "Frameworks, Plataformas y Librerías",
+    "certificatesButton": "Ver mis certificados"
+  },
+  "ProjectsPage": {},
+  "ContactPage": {
+    "title": "Contacto",
+    "emailButton": "Envíame un correo",
+    "cvButton": "Ver mi curriculum",
+    "coursesButton": "Ver mis cursos"
   }
+}

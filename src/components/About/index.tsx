@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl"
 export const About = () => {
     const t = useTranslations("AboutPage")
     return (
-        <section id="sobre-mi" className="bg-lightnavy flex items-center justify-center">
+        <section id="about" className="bg-lightnavy flex items-center justify-center">
             <div className="gap-6 flex flex-col p-10 md:p-12 lg:p-24 xl:p-28">
 
                 <h1 className="uppercase font-nova text-4xl">

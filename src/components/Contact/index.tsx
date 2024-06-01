@@ -4,35 +4,38 @@ import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { SiPlatzi } from "react-icons/si";
 import { PiReadCvLogoFill } from "react-icons/pi";
 import { IoMdMail } from "react-icons/io";
-
-const socialLinks = [
-    { href: "https:/linkedin.com/in/amandalimon", icon: FaLinkedin, label: "LinkedIn" },
-    { href: "https://github.com/amandalimon", icon: FaGithub, label: "GitHub" },
-    { href: "https://wa.me/528186008387", icon: FaWhatsapp, label: "Whatsapp" },
-];
-
-const contactLinks = [
-    {
-        href: "mailto:amandalimon@outlook.com",
-        icon: IoMdMail,
-        label: "Envíame un correo",
-    },
-    {
-        href: "https://1drv.ms/b/c/0a11ad3baf0ea9ed/EfyxFFIyrLpGsdYixIRgRiIBDupiBUtGpTr04VmuTWq-2Q?e=E39gdJ",
-        icon: PiReadCvLogoFill,
-        label: "Ver mi curriculum",
-    },
-    {
-        href: "https://platzi.com/p/amandalimon/",
-        icon: SiPlatzi,
-        label: "Ver mis cursos",
-    },
-];
+import { useTranslations } from "next-intl";
 
 export const Contact = () => {
+    const t = useTranslations("ContactPage")
+    
+    const socialLinks = [
+        { href: "https:/linkedin.com/in/amandalimon", icon: FaLinkedin, label: "LinkedIn" },
+        { href: "https://github.com/amandalimon", icon: FaGithub, label: "GitHub" },
+        { href: "https://wa.me/528186008387", icon: FaWhatsapp, label: "Whatsapp" },
+    ];
+
+    const contactLinks = [
+        {
+            href: "mailto:amandalimon@outlook.com",
+            icon: IoMdMail,
+            label: t("emailButton"),
+        },
+        {
+            href: "https://1drv.ms/b/c/0a11ad3baf0ea9ed/EfyxFFIyrLpGsdYixIRgRiIBDupiBUtGpTr04VmuTWq-2Q?e=E39gdJ",
+            icon: PiReadCvLogoFill,
+            label: t("cvButton"),
+        },
+        {
+            href: "https://platzi.com/p/amandalimon/",
+            icon: SiPlatzi,
+            label: t("coursesButton"),
+        },
+    ];
+
     return (
         <section id="contact" className="h-screen w-full flex flex-col items-center justify-center py-16 gap-6">
-            <h1 className="font-nova text-5xl">Contacto</h1>
+            <h1 className="font-nova text-5xl">{t("title")}</h1>
             <div className="w-1/12 mb-8 border-2 border-orchid"></div>
 
             <section className="flex gap-6 mb-4">

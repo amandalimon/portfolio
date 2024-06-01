@@ -1,6 +1,27 @@
 {
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
   "AboutPage": {
     "title": "About me",
     "description": "Junior frontend developer aspirant with a solid specialization in the JavaScript framework React. My study focus has been on mastering this technology in depth, allowing me to understand web architecture and create intuitive and engaging user experiences. I am excited to apply my expertise in a professional environment and contribute to the development of innovative projects."
+  },
+  "SkillsPage": {
+    "title": "My Skills",
+    "section1": "Languages",
+    "section2": "Hosting/SaaS",
+    "section3": "Frameworks, Plataforms y Libraries",
+    "certificatesButton": "See my certificates"
+  },
+  "ProjectsPage": {},
+  "ContactPage": {
+    "title": "Contact",
+    "emailButton": "Send me an email",
+    "cvButton": "See my resume",
+    "coursesButton": "See my courses"
   }
 }

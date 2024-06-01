@@ -3,15 +3,18 @@ import Image from 'next/image';
 import useNavStore, { Section } from 'app/hooks/useNavStore';
 import { IoMenu } from "react-icons/io5";
 
-const NavLink = ({ section, activeSection, handleSetActive }: { section: Section, activeSection: Section, handleSetActive: (section: Section) => void }) => (
-    <a
-        href={`#${section}`}
-        onClick={() => handleSetActive(section)}
-        className={activeSection === section ? 'underline underline-offset-8 decoration-orchid decoration-2' : ''}
-    >
-        {section.charAt(0).toUpperCase() + section.slice(1)}
-    </a>
-);
+const NavLink = ({ section, activeSection, handleSetActive }: { section: Section, activeSection: Section, handleSetActive: (section: Section) => void }) => {
+    const sectionSlug = section.replace(/\s+/g, '-').toLowerCase();
+    return (
+        <a
+            href={`#${sectionSlug}`}
+            onClick={() => handleSetActive(section)}
+            className={activeSection === section ? 'underline underline-offset-8 decoration-orchid decoration-2' : ''}
+        >
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+        </a>
+    );
+};
 
 export const Navbar = () => {
     const { isOpen, setIsOpen, activeSection, setActiveSection } = useNavStore();
@@ -25,7 +28,7 @@ export const Navbar = () => {
         setIsOpen(false);
     };
 
-    const sections: Section[] = ['home', 'about', 'skills', 'projects', 'contact'];
+    const sections: Section[] = ['home', 'sobre mi', 'skills', 'projects', 'contact'];
 
     return (
         <nav className="fixed flex items-center justify-between w-full px-6 py-2 bg-dark/90 backdrop-blur shadow-lg z-10 font-arsenal font-bold">

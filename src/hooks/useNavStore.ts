@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-export type Section = 'home' | 'about' | 'skills' | 'projects' | 'contact';
+export type Section = 'home' | 'sobre mi' | 'skills' | 'projects' | 'contact';
 
 interface StoreState {
     isOpen: boolean;
@@ -17,7 +17,7 @@ const useNavStore = create<StoreState>((set) => ({
     setActiveSection: (section) => set({ activeSection: section }),
     subscribeToScroll: () => {
         const handleScroll = () => {
-            const sections: Section[] = ['home', 'about', 'skills', 'projects', 'contact'];
+            const sections: Section[] = ['home', 'sobre mi', 'skills', 'projects', 'contact'];
             const offsets = sections.map((section) => {
                 const element = document.getElementById(section);
                 return {

@@ -6,19 +6,34 @@
     "projects": "Projectos",
     "contact": "Contacto"
   },
-  "AboutPage": {
-    "title": "Sobre mi",
+  "AboutSection": {
+    "title": "Sobre Mi",
     "description": "Aspirante a desarrolladora frontend junior con sólida especialización en el framework de JavaScript React. Mi enfoque de estudio se ha centrado en dominar esta tecnología a profundidad, lo que me ha permitido comprender la arquitectura web y crear experiencias de usuario intuitivas y atractivas. Estoy emocionada por aplicar mi experiencia en un entorno profesional y contribuir al desarrollo de proyectos innovadores."
   },
-  "SkillsPage": {
+  "SkillsSection": {
     "title": "Habilidades",
     "section1": "Lenguajes de Programación",
     "section2": "Hosting/SaaS",
     "section3": "Frameworks, Plataformas y Librerías",
     "certificatesButton": "Ver mis certificados"
   },
-  "ProjectsPage": {},
-  "ContactPage": {
+  "ProjectsSection": {
+    "title": "Mis Proyectos",
+    "description": "Esta sección recopila mis repositorios de GitHub utilizando su API. Puedes encontrar más información sobre mis proyectos destacados al hacer clic en 'Ver detalles'.",
+    "cardDetailsTitle": "Ver detalles",
+    "cardLanguagesTitle": "Lenguajes utilizados:",
+    "featuresTitle": "Características",
+    "technologiesTitle":"Tecnologías Utilizadas",
+    "FutureTechDesc": "Future Tech es una tienda en línea que aprovecha al máximo las capacidades de Next.js, incluyendo enrutamiento dinámico, renderizado en el servidor y optimización de SEO.",
+    "FutureTechFeat": "Integración de la API de Shopify.| Obtención de datos con GraphQL.| Sistema de autenticación robusto mediante generación y validación de tokens de acceso.| Server actions para la creación y autenticación de usuarios, así como la gestión del carrito de compras y el proceso de compra.| Revalidación de caché por tag o ruta para mantener los datos actualizados.| Gestión avanzada de cookies.| Manejo de estado en componentes del servidor con Zustand.| Optimización de carga con enrutamiento paralelo.| Implementación de rutas dinámicas y protección de rutas.",
+    "ReduxPokedexDesc": "Aplicación web que permite explorar información detallada sobre diferentes Pokémon, integrando gestión de estado avanzada y llamadas a APIs.",
+    "ShopiDesc": "Shopi es una tienda en línea construída con React.js como proyecto de práctica. Permite filtrar productos por su título y categoría, consultar detalles de un producto, agregar productos al carrito de compras, hacer checkout y revisar historial de compras.",
+    "ShopiFeat": "Consumo de API.| Persistencia de datos con Local Storage.| Información detallada de los productos a través de un modal.| Búsqueda y filtrado de productos por título y categoría.| Navegación con React Router DOM.| Protección de rutas.| Carrito de compras.| Página de órdenes y órden individual.| Sistema de autenticación.| Vistas de usuario: Log In, Create Account, Sign in, Sign Up.| Navbar dinámico dependiendo de si el usuario está auteticado o no (e-mail, My Orders, My Account)",
+    "ReduxPokedexFeat": "Integración con la PokeAPI utilizando Axios para la recuperación de datos.| Configuración del store con Redux Toolkit, definiendo reducers de manera eficiente.| Uso de slices para definir el estado inicial y las acciones, optimizando la estructura de los árboles de estado de la aplicación.| Implementación de acciones asíncronas con createAsyncThunk de Redux Toolkit para obtener y organizar datos de Pokémon por región.| Gestión eficiente del estado de la aplicación, facilitando el manejo de datos y la comunicación entre componentes.",
+    "ToDoMachineDesc": "TO DO Machine es una aplicación web desarrollada en React.js que simplifica la gestión de tareas. Permite agregar, editar, completar y eliminar tareas fácilmente, además de buscar y contar tareas.",
+    "ToDoMachineFeat": "Estados de carga y error.| Uso del hook useEffect para manejar efectos secundarios.| Uso del hook useReducer para manejar el estado y acciones en el almacenamiento local.| Custom Hooks: useLocalStorage y useTodos para gestionar el almacenamiento local y la lógica de las tareas.| React Router DOM: Navegación entre vistas utilizando HashRouter.| Render props y render functions para reutilización y flexibilidad de componentes.| ChangeAlert: Componente de orden superior para alertar a los usuarios sobre cambios en la aplicación."
+  },
+  "ContactSection": {
     "title": "Contacto",
     "emailButton": "Envíame un correo",
     "cvButton": "Ver mi curriculum",

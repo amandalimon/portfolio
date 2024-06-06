@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { arsenal, oxygen_mono, nova_square, raleway } from "app/utils/fonts";
+import { arsenal, oxygen_mono, nova_square } from "app/utils/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }: Readonly<RootLayoutProps>) {
   return (
     <html lang={locale}>
-      <body className={`${arsenal} ${raleway} ${oxygen_mono} ${nova_square}`}>{children}</body>
+      <body className={`${arsenal} ${oxygen_mono} ${nova_square}`}>{children}</body>
     </html>
   );
 }

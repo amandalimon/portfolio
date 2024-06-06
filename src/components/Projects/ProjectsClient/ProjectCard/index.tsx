@@ -1,27 +1,29 @@
-import Image from "next/image";
 import { useState } from "react";
-import { FaCrown, FaExternalLinkAlt } from "react-icons/fa";
-import { TbListDetails, TbExternalLink } from "react-icons/tb";
-
+import { useTranslations } from 'next-intl';
+import Image from "next/image";
 import { Modal } from "app/components/Modal";
+import { ProjectDetails } from "../ProjectDetails";
+import { TbListDetails, TbExternalLink } from "react-icons/tb";
 
 interface ProjectCardProps {
     repoUrl: string;
     name: string;
-    image?: string | '';
-    languages?: string[];
-    appUrl: string;
-    githubPagesUrl: string;
+    languages: string[];
+    image?: string;
+    appUrl?: string;
+    githubPagesUrl?: string;
 }
 
 type topProjects = 'future-tech-nextjs' | 'ecommerce-practice-react-vite-tailwind' | 'react-redux-pokedex' | 'TodoMachine'
 
 export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPagesUrl }: ProjectCardProps) => {
-    const [selectedProject, setSelectedProject] = useState('');
+    const t = useTranslations('ProjectsSection');
+
+    const [selectedProject, setSelectedProject] = useState<topProjects | ''>('');
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
-        setSelectedProject(name);
+        setSelectedProject(name as topProjects);
         setIsModalOpen(true);
     };
 
@@ -44,7 +46,7 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
                 <button onClick={openModal} className="absolute rounded-tl px-4 py-1 overflow-hidden group bg-mustard hover:bg-gradient-to-r hover:from-maize hover:to-mustard transition-all ease-out duration-300">
                     <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-20 rotate-12 group-hover:-translate-x-40 ease"></span>
                     <span className="relative flex items-center justify-center gap-2">
-                        <TbListDetails className="w-4 h-4" />Ver detalles
+                        <TbListDetails className="w-4 h-4" />{t('cardDetailsTitle')}
                     </span>
                 </button>
             )}
@@ -60,7 +62,7 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
             <section className="flex flex-col flex-grow p-2">
                 <div className="flex-grow">
                     <h1 className="text-lg font-bold leading-5 mb-4">{name}</h1>
-                    <p className="mb-4 leading-5">Lenguajes utilizados: {languages?.join(', ')}</p>
+                    <p className="mb-4 leading-5">{t('cardLanguagesTitle')}{languages?.join(', ')}</p>
                 </div>
                 <div className="flex justify-between items-center">
                     {renderLink(repoUrl, "Repo")}
@@ -68,11 +70,11 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
                     {githubPagesUrl && renderLink(githubPagesUrl, "App")}
                 </div>
             </section>
-            {isModalOpen && (<Modal
-                show={isModalOpen}
-                onClose={closeModal}
-                selectedProject={selectedProject as topProjects}
-            />
+
+            {isModalOpen && (
+                <Modal show={isModalOpen} onClose={closeModal}>
+                    <ProjectDetails selectedProject={selectedProject as topProjects} />
+                </Modal>
             )}
         </figure >
     );

@@ -1,15 +1,20 @@
 "use client"
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { useGitHubRepos } from "app/hooks/useGithubRepos";
 import { ProjectCard } from "./ProjectCard";
 import { repoImages } from "app/utils/repoImages";
 import { githubPagesHomepages } from "app/utils/githubPagesHomepages";
 
-export const Projects = () => {
+export const ProjectsClient = () => {
+    const t = useTranslations('ProjectsSection');
+
     const { repos, repoLanguages } = useGitHubRepos('amandalimon');
+
     const allLanguages = Array.from(new Set(Object.values(repoLanguages).flat()));
 
     const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+
     const filterByLanguage = (language: string) => {
         setSelectedLanguage(language === selectedLanguage ? null : language);
     };
@@ -17,11 +22,9 @@ export const Projects = () => {
     return (
         <section id="projects" className='gap-6 bg-lightnavy flex flex-col justify-center py-24 p-10 md:p-12 lg:p-24 xl:p-28'>
 
-            <h1 className='text-5xl font-nova'>Mis Proyectos</h1>
+            <h1 className='text-5xl font-nova'>{t('title')}</h1>
             <div className="w-1/12 mb-8 border-2 border-orchid"></div>
-            <p className="font-mono text-lg">
-                Esta sección recopila mis repositorios de GitHub utilizando su API. Puedes encontrar más información sobre mis proyectos destacados al hacer clic en 'Ver detalles'.
-            </p>
+            <p className="font-mono text-lg">{t('description')}</p>
 
             <div className='flex flex-wrap justify-start my-8'>
                 {allLanguages.map(language => (

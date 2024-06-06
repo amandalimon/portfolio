@@ -7,7 +7,7 @@ import { IoMdMail } from "react-icons/io";
 import { useTranslations } from "next-intl";
 
 export const Contact = () => {
-    const t = useTranslations("ContactPage")
+    const t = useTranslations("ContactSection")
     
     const socialLinks = [
         { href: "https:/linkedin.com/in/amandalimon", icon: FaLinkedin, label: "LinkedIn" },

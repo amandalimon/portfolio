@@ -1,16 +1,13 @@
-import { MouseEventHandler } from "react"
-import { ProjectDetails, projectData } from "../Projects/ProjectDetails";
+import { MouseEventHandler } from "react";
 
 interface ModalProps {
     show: boolean;
     onClose: MouseEventHandler<HTMLButtonElement>;
-    selectedProject: 'future-tech-nextjs' | 'ecommerce-practice-react-vite-tailwind' | 'react-redux-pokedex' | 'TodoMachine';
+    children: React.ReactNode;
 }
 
-export const Modal = ({ show, onClose, selectedProject }: ModalProps) => {
-    if (!show) { return null }
-    const project = projectData[selectedProject];
-    if (!project) return null;
+export const Modal = ({ show, onClose, children }: ModalProps) => {
+    if (!show) return null;
 
     return (
         <div className="fixed left-0 top-0 w-full h-full bg-black/50 z-50 backdrop-blur flex justify-center items-center p-4">
@@ -18,7 +15,7 @@ export const Modal = ({ show, onClose, selectedProject }: ModalProps) => {
                 <div className="relative">
                     <button onClick={onClose} className="absolute right-0 top-0 mr-3 text-3xl text-purple bg-whitesmoke rounded-full w-5 h-5 m-2 flex items-center justify-center">&times;</button>
                 </div>
-                <ProjectDetails {...project} />
+                {children}
             </div>
         </div>
     );

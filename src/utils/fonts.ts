@@ -1,4 +1,4 @@
-import { Arsenal, Oxygen_Mono, Raleway, Nova_Square, } from "next/font/google";
+import { Arsenal, Oxygen_Mono, Nova_Square, } from "next/font/google";
 
 const arsenal_init = Arsenal({
     subsets: ["latin"],
@@ -12,12 +12,6 @@ const oxygen_mono_init = Oxygen_Mono({
     variable: '--font-oxygen_mono'
 });
 
-const raleway_init = Raleway({
-    subsets: ["latin"],
-    weight: ['400'],
-    variable: '--font-raleway'
-});
-
 const nova_init = Nova_Square({
     subsets: ["latin"],
     weight: ['400'],
@@ -26,5 +20,4 @@ const nova_init = Nova_Square({
 
 export const arsenal = arsenal_init.variable
 export const oxygen_mono = oxygen_mono_init.variable
-export const raleway = raleway_init.variable
 export const nova_square = nova_init.variable

@@ -1,4 +1,8 @@
 {
+  "Home": {
+    "description-p1": "Estudiante en Platzi.",
+    "description-p2": "Buscando oportunidades como Front End Developer Junior."
+  },
   "Navigation": {
     "home": "Inicio",
     "about": "Sobre mi",
@@ -7,7 +11,7 @@
     "contact": "Contacto"
   },
   "AboutSection": {
-    "title": "Sobre Mi",
+    "title": "Sobre mi",
     "description": "Aspirante a desarrolladora frontend junior con sólida especialización en el framework de JavaScript React. Mi enfoque de estudio se ha centrado en dominar esta tecnología a profundidad, lo que me ha permitido comprender la arquitectura web y crear experiencias de usuario intuitivas y atractivas. Estoy emocionada por aplicar mi experiencia en un entorno profesional y contribuir al desarrollo de proyectos innovadores."
   },
   "SkillsSection": {
@@ -23,7 +27,7 @@
     "cardDetailsTitle": "Ver detalles",
     "cardLanguagesTitle": "Lenguajes utilizados:",
     "featuresTitle": "Características",
-    "technologiesTitle":"Tecnologías Utilizadas",
+    "technologiesTitle": "Tecnologías Utilizadas",
     "FutureTechDesc": "Future Tech es una tienda en línea que aprovecha al máximo las capacidades de Next.js, incluyendo enrutamiento dinámico, renderizado en el servidor y optimización de SEO.",
     "FutureTechFeat": "Integración de la API de Shopify.| Obtención de datos con GraphQL.| Sistema de autenticación robusto mediante generación y validación de tokens de acceso.| Server actions para la creación y autenticación de usuarios, así como la gestión del carrito de compras y el proceso de compra.| Revalidación de caché por tag o ruta para mantener los datos actualizados.| Gestión avanzada de cookies.| Manejo de estado en componentes del servidor con Zustand.| Optimización de carga con enrutamiento paralelo.| Implementación de rutas dinámicas y protección de rutas.",
     "ReduxPokedexDesc": "Aplicación web que permite explorar información detallada sobre diferentes Pokémon, integrando gestión de estado avanzada y llamadas a APIs.",

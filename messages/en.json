@@ -1,4 +1,8 @@
 {
+  "Home": {
+    "description-p1": "Student at Platzi.",
+    "description-p2": "Looking for opportunities as Front End Developer Junior."
+  },
   "Navigation": {
     "home": "Home",
     "about": "About",
@@ -23,7 +27,7 @@
     "cardDetailsTitle": "See details",
     "cardLanguagesTitle": "Languages used:",
     "featuresTitle": "Features",
-    "technologiesTitle":"Technologies Used",
+    "technologiesTitle": "Technologies Used",
     "FutureTechDesc": "Future Tech is an online store that fully leverages the capabilities of Next.js, including dynamic routing, server-side rendering, and SEO optimization.",
     "FutureTechFeat": "Integration with the Shopify API.| Data fetching with GraphQL.| Robust authentication system using access token generation and validation.| Server actions for user creation and authentication, as well as managing the shopping cart and checkout process.| Cache revalidation by tag or route to keep data up-to-date.| Advanced cookie management.| State management in server components with Zustand.| Load optimization with parallel routing.| Implementation of dynamic routes and route protection.",
     "ShopiDesc": "Shopi is an online store built with React.js as a practice project. It allows filtering products by title and category, viewing product details, adding products to the shopping cart, checking out, and reviewing purchase history.",

@@ -1,16 +1,18 @@
 import { useTranslations } from 'next-intl';
-import NavbarClient from '../NavbarClient';
+import { NavbarClient } from '../NavbarClient';
 
-export default function NavbarServer() {
+export const NavbarServer = () => {
     const t = useTranslations("Navigation");
 
+    const sections = [
+        { id: 'home', label: t("home") },
+        { id: 'about', label: t("about") },
+        { id: 'skills', label: t("skills") },
+        { id: 'projects', label: t("projects") },
+        { id: 'contact', label: t("contact") },
+    ];
+
     return (
-        <NavbarClient
-            home={t("home")}
-            about={t("about")}
-            skills={t("skills")}
-            projects={t("projects")}
-            contact={t("contact")}
-        />
+        <NavbarClient sections={sections} />
     );
 }

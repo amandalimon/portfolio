@@ -69,8 +69,8 @@ export const NavbarClient: React.FC<NavbarClientProps> = ({ sections }) => {
             <Image
                 src="/images/logo.png"
                 alt="logo"
-                width={90}
-                height={90}
+                width={60}
+                height={60}
             />
             <div className="flex items-center justify-center">
                 <div className="hidden md:flex gap-8">

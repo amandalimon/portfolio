@@ -53,9 +53,9 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = (props) => {
                 <Image
                     src={project.imageSrc}
                     alt={project.title}
-                    width={650}
-                    height={500}
-                />
+                    width={750}
+                    height={750}            
+                    />
                 <div className="flex flex-col gap-4 py-4 px-6">
                     <h1 className="font-nova text-2xl">{project.title}</h1>
                     <div className="w-1/12 mb-6 border-2 border-violet"></div>

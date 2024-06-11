@@ -18,7 +18,7 @@
     "title": "Skills",
     "section1": "Languages",
     "section2": "Hosting/SaaS",
-    "section3": "Frameworks, Plataforms y Libraries",
+    "section3": "Frameworks, Platforms and Libraries",
     "certificatesButton": "See my certificates"
   },
   "ProjectsSection": {
@@ -28,13 +28,13 @@
     "cardLanguagesTitle": "Languages used:",
     "featuresTitle": "Features",
     "technologiesTitle": "Technologies Used",
-    "FutureTechDesc": "Future Tech is an online store that fully leverages the capabilities of Next.js, including dynamic routing, server-side rendering, and SEO optimization.",
+    "FutureTechDesc": "FutureTech is an e-commerce platform built upon Next.js, harnessing its advanced features such as dynamic routing, server-side rendering, and SEO optimization to create a seamless online shopping experience.",
     "FutureTechFeat": "Integration with the Shopify API.| Data fetching with GraphQL.| Robust authentication system using access token generation and validation.| Server actions for user creation and authentication, as well as managing the shopping cart and checkout process.| Cache revalidation by tag or route to keep data up-to-date.| Advanced cookie management.| State management in server components with Zustand.| Load optimization with parallel routing.| Implementation of dynamic routes and route protection.",
-    "ShopiDesc": "Shopi is an online store built with React.js as a practice project. It allows filtering products by title and category, viewing product details, adding products to the shopping cart, checking out, and reviewing purchase history.",
+    "ShopiDesc": "Shopi is an e-commerce platform crafted with React.js, offering functionalities such as product filtering, detailed product information display through modals, and seamless navigation with React Router DOM. It features a robust authentication system, enabling users to log in, create accounts, and access personalized views based on their authentication status.",
     "ShopiFeat": "API consumption.|Data persistence with Local Storage.| Detailed product information through a modal.| Product search and filtering by title and category.| Navigation with React Router DOM.| Route protection.| Shopping cart.| Orders page and individual order.| Authentication system.| User views: Log In, Create Account, Sign In, Sign Up.| Dynamic navbar depending on whether the user is authenticated or not (email, My Orders, My Account).",
-    "ReduxPokedexDesc": "Web application that allows exploring detailed information about different Pokémon, integrating advanced state management and API calls.",
+    "ReduxPokedexDesc": "ReduxPokedex is a web application designed for exploring comprehensive information about various Pokémon species. It integrates advanced state management with Redux Toolkit and facilitates API calls to the PokeAPI using Axios. The application efficiently organizes Pokémon data by region, ensuring smooth navigation and interaction.",
     "ReduxPokedexFeat": "Integration with the PokeAPI using Axios for data retrieval.| Store configuration with Redux Toolkit, efficiently defining reducers.| Using slices to define the initial state and actions, optimizing the structure of the application's state trees.| Implementation of asynchronous actions with Redux Toolkit's createAsyncThunk to fetch and organize Pokémon data by region.| Efficient state management of the application, facilitating data handling and component communication.",
-    "ToDoMachineDesc": "TO DO Machine is a web application developed in React.js that simplifies task management. It allows adding, editing, completing, and deleting tasks easily, as well as searching and counting tasks.",
+    "ToDoMachineDesc": "TO DO Machine simplifies task management with its intuitive user interface developed in React.js. Users can easily add, edit, complete, and delete tasks, as well as search and track their progress. The application utilizes custom hooks for managing local storage and employs React Router DOM for seamless navigation between views.",
     "ToDoMachineFeat": "Loading and error states.| Using the useEffect hook to handle side effects.| Using the useReducer hook to handle state and actions in local storage.| Custom Hooks: useLocalStorage and useTodos to manage local storage and task logic.| React Router DOM: Navigation between views using HashRouter.| Render props and render functions for component reuse and flexibility.| ChangeAlert: Higher-order component to alert users about changes in the application.",
     "errorText":"Error: Could not upload repositories from GitHub. Please try again later."
   },

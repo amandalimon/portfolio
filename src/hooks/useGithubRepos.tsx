@@ -5,11 +5,12 @@ import { Repo } from "app/types";
 export const useGitHubRepos = (username: string) => {
     const [repos, setRepos] = useState<Repo[]>([]);
     const [repoLanguages, setRepoLanguages] = useState<Record<string, string[]>>({});
+    const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
         fetchGitHubRepos(username)
             .then((data: Repo[]) => setRepos(data))
-            .catch((error: Error) => console.error('Error fetching repositories:', error));
+            .catch((error: Error) => setError(error));
     }, [username]);
 
     useEffect(() => {
@@ -37,5 +38,5 @@ export const useGitHubRepos = (username: string) => {
         }
     }, [repos]);
 
-    return { repos, repoLanguages };
+    return { repos, repoLanguages, error };
 };

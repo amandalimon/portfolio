@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 export const Skills = () => {
 const t = useTranslations("SkillsSection")
     return (
-        <section id="skills" className="flex flex-col justify-center items-center gap-6 px-2 py-12 md:py-14 lg:py-18 xl:py-22">
+        <section id="skills" className="flex flex-col justify-center items-center gap-6 py-20 px-10 md:px-20">
             <h1 className='text-4xl font-nova'>{t("title")}</h1>
             <div className="w-1/12 mb-8 border-2 border-orchid"></div>
 

@@ -11,7 +11,7 @@
     "contact": "Contact"
   },
   "AboutSection": {
-    "title": "About Me",
+    "title": "About me",
     "description": "Junior frontend developer aspirant with a solid specialization in the JavaScript framework React. My study focus has been on mastering this technology in depth, allowing me to understand web architecture and create intuitive and engaging user experiences. I am excited to apply my expertise in a professional environment and contribute to the development of innovative projects."
   },
   "SkillsSection": {
@@ -35,7 +35,8 @@
     "ReduxPokedexDesc": "Web application that allows exploring detailed information about different Pokémon, integrating advanced state management and API calls.",
     "ReduxPokedexFeat": "Integration with the PokeAPI using Axios for data retrieval.| Store configuration with Redux Toolkit, efficiently defining reducers.| Using slices to define the initial state and actions, optimizing the structure of the application's state trees.| Implementation of asynchronous actions with Redux Toolkit's createAsyncThunk to fetch and organize Pokémon data by region.| Efficient state management of the application, facilitating data handling and component communication.",
     "ToDoMachineDesc": "TO DO Machine is a web application developed in React.js that simplifies task management. It allows adding, editing, completing, and deleting tasks easily, as well as searching and counting tasks.",
-    "ToDoMachineFeat": "Loading and error states.| Using the useEffect hook to handle side effects.| Using the useReducer hook to handle state and actions in local storage.| Custom Hooks: useLocalStorage and useTodos to manage local storage and task logic.| React Router DOM: Navigation between views using HashRouter.| Render props and render functions for component reuse and flexibility.| ChangeAlert: Higher-order component to alert users about changes in the application."
+    "ToDoMachineFeat": "Loading and error states.| Using the useEffect hook to handle side effects.| Using the useReducer hook to handle state and actions in local storage.| Custom Hooks: useLocalStorage and useTodos to manage local storage and task logic.| React Router DOM: Navigation between views using HashRouter.| Render props and render functions for component reuse and flexibility.| ChangeAlert: Higher-order component to alert users about changes in the application.",
+    "errorText":"Error: Could not upload repositories from GitHub. Please try again later."
   },
   "ContactSection": {
     "title": "Contact",

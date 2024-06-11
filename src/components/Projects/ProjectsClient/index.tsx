@@ -9,7 +9,7 @@ import { githubPagesHomepages } from "app/utils/githubPagesHomepages";
 export const ProjectsClient = () => {
     const t = useTranslations('ProjectsSection');
 
-    const { repos, repoLanguages } = useGitHubRepos('amandalimon');
+    const { repos, repoLanguages, error } = useGitHubRepos('amandalimon');
 
     const allLanguages = Array.from(new Set(Object.values(repoLanguages).flat()));
 
@@ -20,11 +20,14 @@ export const ProjectsClient = () => {
     };
 
     return (
-        <section id="projects" className='gap-6 bg-lightnavy flex flex-col justify-center py-24 p-10 md:p-12 lg:p-24 xl:p-28'>
-
+        <section id="projects" className='gap-6 bg-lightnavy flex flex-col justify-center py-20 px-10 md:px-20'>
             <h1 className='text-5xl font-nova'>{t('title')}</h1>
             <div className="w-1/12 mb-8 border-2 border-orchid"></div>
             <p className="font-mono text-lg">{t('description')}</p>
+
+            {error && (
+                <p className="text-orchid font-bold mt-8">{t("errorText")}</p>
+            )}
 
             <div className='flex flex-wrap justify-start my-8'>
                 {allLanguages.map(language => (

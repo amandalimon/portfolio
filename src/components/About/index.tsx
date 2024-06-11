@@ -4,7 +4,7 @@ export const About = () => {
     const t = useTranslations("AboutSection")
     return (
         <section id="about" className="bg-lightnavy flex items-center justify-center">
-            <div className="gap-6 flex flex-col p-10 md:p-12 lg:p-24 xl:p-28">
+            <div className="gap-6 flex flex-col py-20 px-10 md:px-20">
 
                 <h1 className="font-nova text-4xl">
                     {t('title')}

@@ -22,6 +22,7 @@ export const ProjectsServer = () => {
                 "ProjectsSection.ReduxPokedexFeat",
                 "ProjectsSection.ToDoMachineDesc",
                 "ProjectsSection.ToDoMachineFeat",
+                "ProjectsSection.errorText"
             ])}
         >
             <ProjectsClient />

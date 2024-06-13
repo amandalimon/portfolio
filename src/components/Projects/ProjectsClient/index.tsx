@@ -26,7 +26,7 @@ export const ProjectsClient = () => {
             <p className="font-mono text-lg">{t('description')}</p>
 
             {error && (
-                <p className="text-orchid font-bold mt-8">{t("errorText")}</p>
+                <p className="text-powderblue font-bold mt-8">{t('errorText')}</p>
             )}
 
             <div className='flex flex-wrap justify-start my-8'>

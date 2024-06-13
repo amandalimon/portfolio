@@ -53,9 +53,11 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = (props) => {
                 <Image
                     src={project.imageSrc}
                     alt={project.title}
-                    width={750}
-                    height={750}            
-                    />
+                    width={720}
+                    height={378}
+                    placeholder="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+                    className='bg-gray-200'
+                />
                 <div className="flex flex-col gap-4 py-4 px-6">
                     <h1 className="font-nova text-2xl">{project.title}</h1>
                     <div className="w-1/12 mb-6 border-2 border-violet"></div>

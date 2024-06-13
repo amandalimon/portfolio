@@ -18,6 +18,7 @@ export const Hero = () => {
                 alt="hero"
                 width={700}
                 height={700}
+                priority={true}
                 className="absolute opacity-15 md:opacity-70 md:-right-80 mt-14"
             />
         </section>

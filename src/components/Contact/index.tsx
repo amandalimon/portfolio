@@ -10,7 +10,7 @@ export const Contact = () => {
     const t = useTranslations("ContactSection")
     
     const socialLinks = [
-        { href: "https:/linkedin.com/in/amandalimon", icon: FaLinkedin, label: "LinkedIn" },
+        { href: "https://linkedin.com/in/amandalimon", icon: FaLinkedin, label: "LinkedIn" },
         { href: "https://github.com/amandalimon", icon: FaGithub, label: "GitHub" },
         { href: "https://wa.me/528186008387", icon: FaWhatsapp, label: "Whatsapp" },
     ];

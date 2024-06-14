@@ -11,7 +11,6 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "next": "14.2.3",
-    "next-intl": "^3.14.1",
     "react": "^18",
     "react-icons": "^5.2.1",
     "zustand": "^4.5.2"
@@ -23,6 +22,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "next-intl": "^3.15.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

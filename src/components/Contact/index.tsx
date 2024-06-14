@@ -22,7 +22,7 @@ export const Contact = () => {
             label: t("emailButton"),
         },
         {
-            href: "https://1drv.ms/b/c/0a11ad3baf0ea9ed/EfyxFFIyrLpGsdYixIRgRiIBDupiBUtGpTr04VmuTWq-2Q?e=E39gdJ",
+            href: "https://1drv.ms/b/c/0a11ad3baf0ea9ed/EezcD318cLhPsN5vn52uocIBmV9RcH8PO19LR1nROXq-Vw?e=0lQm3A",
             icon: PiReadCvLogoFill,
             label: t("cvButton"),
         },

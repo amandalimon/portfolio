@@ -14,5 +14,6 @@ export const repoImages: RepoImages = {
     'ts-app': '/images/projects/tsapp.png',
     'ts-practice': '/images/projects/tspractice.png',
     'typescript-oop': '/images/projects/oop.png',
-    'manejo-estado-react': '/images/projects/state.png'
+    'manejo-estado-react': '/images/projects/state.png',
+    'myday-app': '/images/projects/myday-app.png'
 };

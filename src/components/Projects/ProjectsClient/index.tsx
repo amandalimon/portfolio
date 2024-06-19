@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl';
 import { useGitHubRepos } from "app/hooks/useGithubRepos";
 import { ProjectCard } from "./ProjectCard";
 import { repoImages } from "app/utils/repoImages";
-import { githubPagesHomepages } from "app/utils/githubPagesHomepages";
 
 export const ProjectsClient = () => {
     const t = useTranslations('ProjectsSection');
@@ -47,12 +46,11 @@ export const ProjectsClient = () => {
                     .map(repo => (
                         <div key={repo.id} className="flex flex-col">
                             <ProjectCard
-                                image={repoImages[repo.name.toLowerCase()]}
+                                image={repoImages[repo.name.toLowerCase()] || '/images/projects/default.png'}
                                 name={repo.name}
                                 languages={repoLanguages[repo.name]}
                                 repoUrl={repo.html_url}
                                 appUrl={repo.homepage}
-                                githubPagesUrl={githubPagesHomepages[repo.name.toLowerCase()]}
                             />
                         </div>
                     ))}

@@ -54,9 +54,9 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
                 <Image
                     src={image}
                     alt={name}
-                    width={600}
-                    height={500}
-                    className="object-cover rounded"
+                    width={550}
+                    height={290}
+                    className="object-cover rounded-t"
                 />
             )}
             <section className="flex flex-col flex-grow p-2">
@@ -67,7 +67,6 @@ export const ProjectCard = ({ repoUrl, name, image, languages, appUrl, githubPag
                 <div className="flex justify-between items-center">
                     {renderLink(repoUrl, "Repo")}
                     {appUrl && renderLink(appUrl, "App")}
-                    {githubPagesUrl && renderLink(githubPagesUrl, "App")}
                 </div>
             </section>
 
